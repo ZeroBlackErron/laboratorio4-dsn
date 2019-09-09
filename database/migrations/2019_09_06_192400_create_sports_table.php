@@ -15,6 +15,7 @@ class CreateSportsTable extends Migration
     {
         Schema::create('sports', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('slug', 30);
             $table->string('name', 25);
             $table->text('description');
             $table->text('history');
